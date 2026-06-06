@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Antonella & Kevin - Nuestro Viaje de Vida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Invitación animada -->
+  <section id="invitation">
+    <div id="envelope">
+      <div class="flap"></div>
+      <div class="letter">
+        <h1>Antonella & Kevin</h1>
+        <p>Acompáñenos en nuestro viaje de vida</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fecha y lugar -->
+  <section id="details">
+    <h2>📅 12 de Octubre 2026</h2>
+    <h3>⏰ 5:00 PM</h3>
+    <h3>📍 Quito, Ecuador</h3>
+  </section>
+
+  <!-- Collage -->
+  <section id="collage">
+    <h2>Nuestra Historia</h2>
+    <div class="gallery">
+      <img src="img/foto1.jpg" alt="Foto 1">
+      <img src="img/foto2.jpg" alt="Foto 2">
+      <img src="img/foto3.jpg" alt="Foto 3">
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section id="video">
+    <h2>Cómo nos conocimos</h2>
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+  </section>
+
+  <!-- Qué esperar -->
+  <section id="activities">
+    <h2>Qué esperar de la boda</h2>
+    <ul>
+      <li>📸 Fotos instantáneas</li>
+      <li>🍦 Helados</li>
+      <li>🎁 Souvenirs</li>
+      <li>🎶 Banda en vivo</li>
+    </ul>
+  </section>
+
+  <!-- Recomendaciones -->
+  <section id="ecuador">
+    <h2>Recomendaciones en Ecuador</h2>
+    <p>Quito histórico, Mitad del Mundo, Baños, Otavalo...</p>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <h2>Confirma tu asistencia</h2>
+    <iframe src="URL_DEL_GOOGLE_FORM" width="100%" height="800"></iframe>
+  </section>
+</body>
+</html>
