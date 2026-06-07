@@ -15,12 +15,12 @@ body {
 }
 
 .banner-img {
-  width: 100%;            /* ocupa todo el ancho */
-  height: 250px;          /* altura fija del banner */
-  object-fit: cover;      /* recorta proporcionalmente */
-  object-position: center;/* centra la imagen dentro del espacio */
+  width: 100%;
+  height: auto;       /* mantiene proporción original */
   display: block;
+  margin: 0 auto;     /* centra la imagen */
 }
+
 
 /* Texto debajo del banner */
 .subtitle p {
