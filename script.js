@@ -33,3 +33,25 @@ window.onload = () => {
     });
   });
 };
+
+  // Animación se agranda la imagen en el centro
+
+
+const images = document.querySelectorAll('.photo-track img');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.transform = 'scale(1.2)';
+      entry.target.style.opacity = '1';
+    } else {
+      entry.target.style.transform = 'scale(1)';
+      entry.target.style.opacity = '0.7';
+    }
+  });
+}, {
+  root: document.querySelector('.photo-scroll'),
+  threshold: 0.6 // se activa cuando la imagen está centrada
+});
+
+images.forEach(img => observer.observe(img));
