@@ -12,7 +12,7 @@ window.onload = () => {
     gallery.appendChild(img);
   }
 
-  // Animaciones al hacer scroll
+  // Animaciones al hacer scroll (fade-in de secciones)
   gsap.utils.toArray("section").forEach(section => {
     gsap.from(section, {
       opacity: 0,
@@ -25,7 +25,7 @@ window.onload = () => {
     });
   });
 
-  // Animación FAQ (acordeón simple)
+  // FAQ tipo acordeón
   document.querySelectorAll(".faq-item h3").forEach(q => {
     q.addEventListener("click", () => {
       const p = q.nextElementSibling;
@@ -51,17 +51,21 @@ window.onload = () => {
   });
   images.forEach(img => observer.observe(img));
 
-  // Scroll automático horizontal
+  // Carrusel infinito con transform
   function autoScroll() {
-    const scrollContainer = document.querySelector('.photo-scroll');
-    let scrollAmount = 0;
+    const track = document.querySelector('.photo-track');
+    let position = 0;
+
+    // duplicar fotos para efecto infinito
+    track.innerHTML += track.innerHTML;
 
     function step() {
-      scrollAmount += 1;
-      scrollContainer.scrollLeft = scrollAmount;
+      position -= 1; // velocidad (px por frame)
+      track.style.transform = `translateX(${position}px)`;
 
-      if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-        scrollAmount = 0;
+      // reinicia cuando se haya desplazado la mitad (porque duplicamos las fotos)
+      if (Math.abs(position) >= track.scrollWidth / 2) {
+        position = 0;
       }
 
       requestAnimationFrame(step);
