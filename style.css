@@ -45,6 +45,7 @@ body {
   align-items: flex-start;
 }
 
+
 .home-image {
   position: relative;
   flex: 1;
@@ -52,39 +53,31 @@ body {
 
 .home-image img {
   width: 100%;
-  max-width: 400px; /* ajusta según tu diseño */
+  max-width: 400px;
   border-radius: 10px;
 }
 
+/* Texto overlay animado */
 .home-overlay {
   position: absolute;
-  bottom: 20px;
+  top: 20px;          /* esquina superior */
   left: 20px;
-  font-size: 1.8em;
-  font-weight: bold;
+  font-size: 2em;
+  font-style: italic; /* cursiva elegante */
+  font-family: 'Georgia', serif; /* tipografía más clásica */
+  font-weight: 500;
   color: white;
   opacity: 0;
-  animation: fadeInText 2s ease forwards;
+  animation: fadeInOverlay 2s ease forwards;
 }
 
-@keyframes fadeInText {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Animación fade in + desplazamiento */
+@keyframes fadeInOverlay {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.home-text {
-  flex: 1;
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-.home-text a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: bold;
-}
-.home-text a:hover {
-  text-decoration: underline;
-}
+
 
 /* Ruleta Fotos */
 #ruleta h2 {
