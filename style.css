@@ -179,3 +179,10 @@ section {
     object-fit: contain; /* asegura que las verticales no se corten */
   }
 }
+
+#map {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;   /* opcional */
+  margin-top: 20px;
+}
