@@ -142,10 +142,12 @@ section {
 
 /* Auto Scroll*/
 .photo-scroll {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-x: auto;              /* activa scroll horizontal */
+  scroll-snap-type: x mandatory; /* hace que las fotos se centren al pasar */
   display: flex;
   justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .photo-track {
@@ -161,4 +163,5 @@ section {
   border-radius: 10px;
   transition: transform 0.3s, opacity 0.3s;
   scroll-snap-align: center;
+  opacity: 0.7; /* estado inicial */
 }
