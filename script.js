@@ -75,3 +75,34 @@ window.onload = () => {
   }
   autoScroll();
 };
+
+
+// Inicializar mapa centrado en Quito
+const map = L.map('map').setView([-0.2295, -78.5243], 7); // Quito coords
+
+// Cargar tiles de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// Lugares recomendados
+const lugares = [
+  { nombre: "Panecillo", coords: [-0.2345, -78.5127], distancia: "5 km", tiempo: "15 min", desc: "Mirador icónico de Quito con la Virgen del Panecillo." },
+  { nombre: "Mitad del Mundo", coords: [-0.0022, -78.4556], distancia: "25 km", tiempo: "40 min", desc: "Monumento en la línea ecuatorial." },
+  { nombre: "Termas Papallacta", coords: [-0.3667, -78.1333], distancia: "67 km", tiempo: "1h30", desc: "Aguas termales en la montaña." },
+  { nombre: "Tena", coords: [-0.9833, -77.8167], distancia: "190 km", tiempo: "3h30", desc: "Capital de la Amazonía con ríos y selva." },
+  { nombre: "Mindo", coords: [0.0416, -78.8075], distancia: "80 km", tiempo: "2h", desc: "Bosque nublado famoso por aves y cascadas." },
+  { nombre: "Hostería El Jardín de Misahuallí", coords: [-1.0500, -77.6833], distancia: "200 km", tiempo: "4h", desc: "Hospedaje amazónico junto al río Napo." },
+  { nombre: "Casa de Piedra Glamping", coords: [-0.9000, -78.6000], distancia: "120 km", tiempo: "2h30", desc: "Glamping en medio de la naturaleza." },
+  { nombre: "Casa Blanca", coords: [0.0000, -79.3667], distancia: "350 km", tiempo: "6h", desc: "Playa en la costa ecuatoriana." },
+  { nombre: "Galápagos", coords: [-0.9538, -90.9656], distancia: "1000 km", tiempo: "Vuelo 2h", desc: "Islas únicas con fauna endémica." }
+];
+
+// Crear pines con popups
+lugares.forEach(lugar => {
+  L.marker(lugar.coords).addTo(map)
+    .bindTooltip(`<b>${lugar.nombre}</b><br>${lugar.distancia} desde Quito<br>${lugar.tiempo}<br>${lugar.desc}`, {
+      permanent: false,
+      direction: "top"
+    });
+});
