@@ -33,44 +33,40 @@ window.onload = () => {
     });
   });
 
-  // Intersection Observer para agrandar la imagen del centro
-  const images = document.querySelectorAll('.photo-track img');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.transform = 'scale(1.2)';
-        entry.target.style.opacity = '1';
-      } else {
-        entry.target.style.transform = 'scale(1)';
-        entry.target.style.opacity = '0.7';
-      }
-    });
-  }, {
-    root: document.querySelector('.photo-scroll'),
-    threshold: 0.6 // se activa cuando la imagen está centrada
+// Intersection Observer para agrandar la imagen del centro
+const images = document.querySelectorAll('.photo-track img');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.transform = 'scale(1.2)';
+      entry.target.style.opacity = '1';
+    } else {
+      entry.target.style.transform = 'scale(1)';
+      entry.target.style.opacity = '0.7';
+    }
   });
-  images.forEach(img => observer.observe(img));
+}, {
+  root: document.querySelector('.photo-scroll'),
+  threshold: 0.6
+});
+images.forEach(img => observer.observe(img));
 
-  // Scroll automático horizontal
-  function autoScroll() {
-    const scrollContainer = document.querySelector('.photo-scroll');
-    let scrollAmount = 0;
+// Scroll automático horizontal
+function autoScroll() {
+  const scrollContainer = document.querySelector('.photo-scroll');
+  let scrollAmount = 0;
 
-    function step() {
-      scrollAmount += 1; // velocidad del scroll (px por frame)
-      scrollContainer.scrollLeft = scrollAmount;
+  function step() {
+    scrollAmount += 1;
+    scrollContainer.scrollLeft = scrollAmount;
 
-      // Reinicia al llegar al final
-      if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-        scrollAmount = 0;
-      }
-
-      requestAnimationFrame(step);
+    if (scrollAmount >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+      scrollAmount = 0;
     }
 
-    step();
+    requestAnimationFrame(step);
   }
 
-  // Activar scroll automático
-  autoScroll();
-};
+  step();
+}
+autoScroll();
