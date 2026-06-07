@@ -60,4 +60,46 @@ section {
   .gallery {
     column-count: 1;
   }
+
+/* Barra de navegación fija */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 182, 193, 0.9); /* rosa suave */
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Ajuste para que el contenido no quede oculto detrás del menú */
+body {
+  padding-top: 60px;
+}
+
+  
 }
