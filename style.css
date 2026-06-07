@@ -15,10 +15,13 @@ body {
 
 /* Imagen ocupa todo el ancho */
 .banner-img {
-  width: 60%;       /* se adapta al ancho de la pantalla */
-  height: auto;      /* mantiene proporción */
+  width: 100%;        /* ocupa todo el ancho */
+  height: auto;       /* mantiene proporción */
+  max-height: 300px;  /* ajusta el grosor del banner */
+  object-fit: cover;  /* recorta la imagen si es muy alta */
   display: block;
 }
+
 
 /* Texto debajo del banner */
 .subtitle p {
