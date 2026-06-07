@@ -7,30 +7,25 @@ body {
 }
 
 /* Header */
+/* Header como banner */
 .header {
-  display: flex;
-  flex-direction: column; /* ahora los elementos se apilan uno debajo del otro */
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+  text-align: center;
   background: #fff; /* fondo blanco */
 }
 
-.header-img {
-  max-height: 200px; /* ajusta el tamaño de la imagen */
-  margin-bottom: 20px; /* espacio entre la imagen y el texto */
+/* Imagen ocupa todo el ancho */
+.banner-img {
+  width: 100%;       /* se adapta al ancho de la pantalla */
+  height: auto;      /* mantiene proporción */
+  display: block;
 }
 
-.title h1 {
-  margin: 0;
-  font-size: 2.5em;
+/* Texto debajo del banner */
+.subtitle p {
+  font-size: 1.5em;
   color: #444;
-}
-
-.title p {
-  margin: 0;
-  font-size: 1.2em;
-  color: #777;
+  margin: 20px 0;
+  font-weight: 500;
 }
 
 
