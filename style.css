@@ -30,15 +30,60 @@ body {
   line-height: 1.2;  /* más compacto */
 }
 
-/* Bienvenidos */
-section h2 {
-  margin: 10px 0;    /* reduce espacio arriba y abajo */
-  line-height: 1.2;
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Íconos del evento */
-.event-details {
-  margin-top: 15px;  /* menos espacio entre texto y los íconos */
+.home-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.home-image {
+  position: relative;
+  flex: 1;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 400px; /* ajusta según tu diseño */
+  border-radius: 10px;
+}
+
+.home-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  animation: fadeInText 2s ease forwards;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.home-text {
+  flex: 1;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+.home-text a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.home-text a:hover {
+  text-decoration: underline;
 }
 
 /* Ruleta Fotos */
