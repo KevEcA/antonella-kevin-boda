@@ -1,35 +1,35 @@
-/* Fondo animado */
 body {
-  background: linear-gradient(-45deg, #fdfcfb, #e2d1c3, #fbc2eb, #a6c1ee);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background: #fff; /* fondo blanco */
   color: #333;
 }
 
-@keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
-/* Header con logos */
+/* Header */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
+  background: #fff;
 }
 
-.logo-left, .logo-right {
-  width: 100px;
-  text-align: center;
+.header-img {
+  max-height: 120px;
+  margin-right: 20px;
 }
 
-.title {
-  text-align: center;
+.title h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #444;
+}
+
+.title p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #777;
 }
 
 /* Menú horizontal fijo */
@@ -37,34 +37,41 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 182, 193, 0.9);
-  backdrop-filter: blur(5px);
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
   z-index: 1000;
 }
 
 .navbar ul {
   list-style: none;
   margin: 0;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .navbar a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
   color: #000;
-  transform: scale(1.1);
 }
 
 body {
-  padding-top: 80px; /* espacio para el menú fijo */
+  padding-top: 100px; /* espacio para el menú fijo */
+}
+
+/* Secciones */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
 /* Galería masonry */
