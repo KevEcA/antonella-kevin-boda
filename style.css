@@ -26,10 +26,22 @@ body {
 .subtitle p {
   font-size: 1.6em;
   color: #444;
-  margin: 10px 0;   /* más compacto */
+  margin: 5px 0;     /* menos separación */
   font-weight: 500;
+  line-height: 1.2;  /* más compacto */
+}
+
+/* Bienvenidos */
+section h2 {
+  margin: 10px 0;    /* reduce espacio arriba y abajo */
   line-height: 1.2;
 }
+
+/* Íconos del evento */
+.event-details {
+  margin-top: 15px;  /* menos espacio entre texto y los íconos */
+}
+
 
 /* Menú horizontal fijo */
 .navbar {
