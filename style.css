@@ -17,6 +17,7 @@ body {
 .banner-img {
   width: 100%;            /* ocupa todo el ancho */
   height: auto;          /* altura fija del banner */
+  max-height: 300px;  /* ajusta el grosor del banner */
   object-fit: cover;      /* recorta proporcionalmente */
   object-position: center;/* centra la imagen dentro del espacio */
   display: block;
