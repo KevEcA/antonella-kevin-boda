@@ -24,4 +24,12 @@ window.onload = () => {
       }
     });
   });
+
+  // Animación FAQ (acordeón simple)
+  document.querySelectorAll(".faq-item h3").forEach(q => {
+    q.addEventListener("click", () => {
+      const p = q.nextElementSibling;
+      p.style.display = p.style.display === "block" ? "none" : "block";
+    });
+  });
 };
