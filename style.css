@@ -157,12 +157,23 @@ section {
 
 .photo-track img {
   flex: 0 0 auto;
-  width: auto;          /* se ajusta al ancho proporcional */
-  height: 450px;        /* misma altura que el video */
-  object-fit: cover;    /* recorta proporcionalmente */
+  width: auto;             /* mantiene proporción */
+  height: 450px;           /* misma altura que el video en escritorio */
+  max-height: 80vh;        /* nunca más alto que la pantalla */
+  object-fit: contain;     /* muestra la foto completa (no recorta) */
   border-radius: 10px;
   transition: transform 0.3s, opacity 0.3s;
   scroll-snap-align: center;
-  opacity: 0.7;         /* estado inicial */
+  opacity: 0.7;
 }
+
+/* Ajuste automático en móviles */
+@media (max-width: 768px) {
+  .photo-track img {
+    height: 250px;       /* más bajo en pantallas pequeñas */
+    width: auto;
+    object-fit: contain; /* asegura que las verticales no se corten */
+  }
+}
+
 
