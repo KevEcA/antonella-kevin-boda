@@ -1,39 +1,35 @@
+/* Fuente y fondo general */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background: #fff; /* fondo blanco */
   color: #333;
+  padding-top: 100px; /* espacio para el menú fijo */
 }
 
-/* Header */
 /* Header como banner */
 .header {
   text-align: center;
-  background: #fff; /* fondo blanco */
+  background: #fff;
 }
 
-/* Imagen ocupa todo el ancho */
 .banner-img {
   width: 100%;            /* ocupa todo el ancho */
-  height: auto;          /* altura fija del banner */
-  max-height: 300px;  /* ajusta el grosor del banner */
+  height: 250px;          /* altura fija del banner */
   object-fit: cover;      /* recorta proporcionalmente */
   object-position: center;/* centra la imagen dentro del espacio */
   display: block;
 }
 
-
-
-
 /* Texto debajo del banner */
 .subtitle p {
   font-size: 1.6em;
   color: #444;
-  margin: 20px 0;
+  margin: 10px 0;   /* más compacto */
   font-weight: 500;
+  line-height: 1.2;
 }
-
 
 /* Menú horizontal fijo */
 .navbar {
@@ -65,16 +61,43 @@ body {
   color: #000;
 }
 
-body {
-  padding-top: 100px; /* espacio para el menú fijo */
-}
-
-/* Secciones */
+/* Secciones generales */
 section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
   text-align: center;
+}
+
+/* Sección Evento en 4 columnas */
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 20px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.detail-item {
+  font-size: 1.2em;
+  color: #444;
+}
+
+.detail-item span {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.detail-item a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+}
+
+.detail-item a:hover {
+  color: #000;
 }
 
 /* Galería masonry */
@@ -95,8 +118,12 @@ section {
   opacity: 0.9;
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
   .gallery {
     column-count: 1;
+  }
+  .event-details {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
   }
 }
