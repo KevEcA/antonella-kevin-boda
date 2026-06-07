@@ -142,12 +142,12 @@ section {
 
 /* Auto Scroll*/
 .photo-scroll {
-  overflow-x: auto;              /* activa scroll horizontal */
-  scroll-snap-type: x mandatory; /* hace que las fotos se centren al pasar */
+  overflow-x: hidden;              /* activa scroll horizontal */
+  //scroll-snap-type: x mandatory; /* hace que las fotos se centren al pasar */
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  //justify-content: center;
+  //gap: 20px;
+  //padding: 20px;
 }
 
 .photo-track {
@@ -157,11 +157,12 @@ section {
 
 .photo-track img {
   flex: 0 0 auto;
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
+  width: auto;          /* se ajusta al ancho proporcional */
+  height: 450px;        /* misma altura que el video */
+  object-fit: cover;    /* recorta proporcionalmente */
   border-radius: 10px;
   transition: transform 0.3s, opacity 0.3s;
   scroll-snap-align: center;
-  opacity: 0.7; /* estado inicial */
+  opacity: 0.7;         /* estado inicial */
 }
+
