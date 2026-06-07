@@ -102,11 +102,37 @@ const lugares = [
 ];
 
 // Crear pines con popups
+const listContainer = document.getElementById("map-list");
+
 lugares.forEach(lugar => {
-  L.marker(lugar.coords).addTo(map)
+  const marker = L.marker(lugar.coords).addTo(map)
     .bindTooltip(`<b>${lugar.nombre}</b><br>${lugar.distancia} desde Quito<br>${lugar.tiempo}<br>${lugar.desc}`, {
       permanent: false,
       direction: "top"
     });
+
+  // Crear elemento en la lista
+  const item = document.createElement("div");
+  item.className = "map-item";
+  item.textContent = lugar.nombre;
+
+  // Hover: resaltar marcador
+  item.addEventListener("mouseenter", () => {
+    marker.openTooltip();
+    marker.setZIndexOffset(1000);
+  });
+  item.addEventListener("mouseleave", () => {
+    marker.closeTooltip();
+    marker.setZIndexOffset(0);
+  });
+
+  // Click: centrar mapa en el lugar
+  item.addEventListener("click", () => {
+    map.setView(lugar.coords, 10); // zoom 10
+    marker.openTooltip();
+  });
+
+  listContainer.appendChild(item);
 });
+
 };
