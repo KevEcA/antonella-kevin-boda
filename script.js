@@ -95,7 +95,7 @@ const lugares = [
   { nombre: "Hostería El Jardín de Misahuallí", coords: [-1.0500, -77.6833], distancia: "200 km", tiempo: "4h", desc: "Hospedaje amazónico junto al río Napo."},
   { nombre: "Casa de Piedra Glamping", coords: [0.68, -77.95], distancia: "180 km", tiempo: "3h30", desc: "Glamping en el páramo de frailejones, Carchi."},
   { nombre: "Casa Lago San Pablo", coords: [0.216, -78.233], distancia: "90 km", tiempo: "1h45", desc: "Hospedaje frente al Lago San Pablo, cerca de Otavalo."},
-  { nombre: "Casa Blanca", coords: [0.0000, -79.3667], distancia: "350 km", tiempo: "6h", desc: "Playa en la costa ecuatoriana." },
+  { nombre: "Casa Blanca (Same)", coords: [0.861, -79.674], distancia: "350 km", tiempo: "6h", desc: "Complejo turístico privado en Same, Esmeraldas, con playa, marina y hospedajes."},
   { nombre: "Galápagos", coords: [-0.9538, -90.9656], distancia: "1000 km", tiempo: "Vuelo 2h", desc: "Islas únicas con fauna endémica." },
   { nombre: "Baños de Agua Santa", coords: [-1.3969, -78.4247], distancia: "190 km", tiempo: "3h30", desc: "Ciudad turística famosa por cascadas, termas y deportes de aventura." },
   { nombre: "Quilotoa", coords: [-0.9180, -78.9250], distancia: "180 km", tiempo: "3h30", desc: "Laguna volcánica de aguas turquesas en la Sierra central." },
