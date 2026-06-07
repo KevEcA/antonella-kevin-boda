@@ -42,6 +42,16 @@ section h2 {
   margin-top: 15px;  /* menos espacio entre texto y los íconos */
 }
 
+/* Ruleta Fotos */
+#ruleta h2 {
+  font-size: 2em;
+  color: #444;
+  margin-bottom: 20px; /* espacio entre título y fotos */
+  text-align: center;
+  font-weight: bold;
+}
+
+
 
 /* Menú horizontal fijo */
 .navbar {
