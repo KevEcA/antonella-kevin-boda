@@ -152,12 +152,17 @@ section {
 
 /* Auto Scroll*/
 .photo-scroll {
-  overflow-x: hidden;              /* permite scroll horizontal */
+  overflow-x: scroll;     /* permite scroll horizontal */
+  overflow-y: hidden;     /* oculta vertical */
   width: 100%;
   position: relative;
   display: flex;
+  scrollbar-width: none;  /* Firefox */
 }
 
+.photo-scroll::-webkit-scrollbar {
+  display: none;          /* Chrome, Safari, Edge */
+}
 
 .photo-track {
   display: flex;
