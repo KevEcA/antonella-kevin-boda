@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Viaje a Ecuador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar"> ... </nav>
+
+  <section id="viaje">
+    <h2>Itinerario de Ecuador</h2>
+    <ul>
+      <li>Quito histórico</li>
+      <li>Mitad del Mundo</li>
+      <li>Baños de Agua Santa</li>
+      <li>Otavalo</li>
+      <li>Galápagos (opcional)</li>
+    </ul>
+
+    <h3>Mapa interactivo</h3>
+    <div id="map"></div>
+  </section>
+
+  <script>
+    // Ejemplo con Leaflet.js
+    var map = L.map('map').setView([-1.8312, -78.1834], 7);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    var lugares = [
+      {nombre: "Quito histórico", coords: [-0.2295, -78.5243], link: "https://es.wikipedia.org/wiki/Quito"},
+      {nombre: "Mitad del Mundo", coords: [-0.0022, -78.4557], link: "https://mitaddelmundo.com"},
+      {nombre: "Baños", coords: [-1.3967, -78.4247], link: "https://banos-ecuador.com"},
+      {nombre: "Otavalo", coords: [0.2333, -78.2667], link: "https://otavalo.com"}
+    ];
+
+    lugares.forEach(l => {
+      L.marker(l.coords).addTo(map)
+        .bindPopup(`<b>${l.nombre}</b><br><a href="${l.link}" target="_blank">Ver más</a>`);
+    });
+  </script>
+</body>
+</html>
