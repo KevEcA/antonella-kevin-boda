@@ -15,14 +15,14 @@ body {
 
 /* Imagen ocupa todo el ancho */
 .banner-img {
-  width: 100%;       /* se adapta al ancho de la pantalla */
+  width: 80%;       /* se adapta al ancho de la pantalla */
   height: auto;      /* mantiene proporción */
   display: block;
 }
 
 /* Texto debajo del banner */
 .subtitle p {
-  font-size: 1.5em;
+  font-size: 1.6em;
   color: #444;
   margin: 20px 0;
   font-weight: 500;
