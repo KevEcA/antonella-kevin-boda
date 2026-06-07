@@ -93,7 +93,8 @@ const lugares = [
   { nombre: "Tena", coords: [-0.9833, -77.8167], distancia: "190 km", tiempo: "3h30", desc: "Capital de la Amazonía con ríos y selva." },
   { nombre: "Mindo", coords: [0.0416, -78.8075], distancia: "80 km", tiempo: "2h", desc: "Bosque nublado famoso por aves y cascadas." },
   { nombre: "Hostería El Jardín de Misahuallí", coords: [-1.0500, -77.6833], distancia: "200 km", tiempo: "4h", desc: "Hospedaje amazónico junto al río Napo." },
-  { nombre: "Casa de Piedra Glamping", coords: [-0.9000, -78.6000], distancia: "120 km", tiempo: "2h30", desc: "Glamping en medio de la naturaleza." },
+  { nombre: "Casa de Piedra Glamping", coords: [0.68, -77.95], distancia: "180 km", tiempo: "3h30", desc: "Glamping en el páramo de frailejones, Carchi.", icon: iconSelva},
+  { nombre: "Casa Lago San Pablo", coords: [0.216, -78.233], distancia: "90 km", tiempo: "1h45", desc: "Hospedaje frente al Lago San Pablo, cerca de Otavalo.", icon: iconNaturaleza}
   { nombre: "Casa Blanca", coords: [0.0000, -79.3667], distancia: "350 km", tiempo: "6h", desc: "Playa en la costa ecuatoriana." },
   { nombre: "Galápagos", coords: [-0.9538, -90.9656], distancia: "1000 km", tiempo: "Vuelo 2h", desc: "Islas únicas con fauna endémica." }
 ];
