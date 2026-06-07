@@ -6,25 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
 </head>
-
-<!-- Menú de navegación fijo -->
-<nav class="navbar">
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#rsvp">Confirma asistencia</a></li>
-    <li><a href="#details">Evento</a></li>
-    <li><a href="#day">Día de Boda</a></li>
-    <li><a href="#ecuador">Viaje a Ecuador</a></li>
-    <li><a href="#gifts">Regalos</a></li>
-    <li><a href="#faq">Preguntas Frecuentes</a></li>
-  </ul>
-</nav>
-  
 <body>
-  <!-- Invitación animada -->
-  <section id="invitation">
+  <!-- Menú de navegación fijo -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#rsvp">Confirma asistencia</a></li>
+      <li><a href="#details">Evento</a></li>
+      <li><a href="#day">Día de Boda</a></li>
+      <li><a href="#ecuador">Viaje a Ecuador</a></li>
+      <li><a href="#gifts">Regalos</a></li>
+      <li><a href="#faq">Preguntas Frecuentes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
     <div id="envelope">
       <div class="flap"></div>
       <div class="letter">
@@ -34,7 +34,7 @@
     </div>
   </section>
 
-  <!-- Fecha y lugar -->
+  <!-- Evento -->
   <section id="details">
     <h2>📅 5 de Diciembre 2026</h2>
     <h3>⏰ 4:00 PM</h3>
@@ -43,31 +43,23 @@
     </a></h3>
   </section>
 
-<!-- Video (justo debajo de la fecha/lugar) -->
-<section id="video">
-  <h2>Cómo nos conocimos</h2>
-  <div class="video-container">
-    <iframe width="80%" height="450"
-      src="https://www.youtube.com/embed/tkcsMs-PzdY?autoplay=1&mute=1"
-      title="Corto Boda"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-
-  <!-- Collage -->
-  <section id="collage">
-    <h2>Nuestra Historia</h2>
-    <div class="gallery" id="gallery"></div>
+  <!-- Video -->
+  <section id="video">
+    <h2>Cómo nos conocimos</h2>
+    <div class="video-container">
+      <iframe width="80%" height="450"
+        src="https://www.youtube.com/embed/tkcsMs-PzdY?autoplay=1&mute=1"
+        title="Corto Boda"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
   </section>
 
-
-  <!-- Qué esperar -->
-  <section id="activities">
-    <h2>Qué esperar de la boda</h2>
+  <!-- Día de Boda -->
+  <section id="day">
+    <h2>Día de Boda</h2>
     <ul>
       <li>📸 Fotos instantáneas</li>
       <li>🍦 Helados</li>
@@ -76,10 +68,40 @@
     </ul>
   </section>
 
-  <!-- Recomendaciones -->
+  <!-- Collage -->
+  <section id="collage">
+    <h2>Nuestra Historia</h2>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <!-- Viaje a Ecuador -->
   <section id="ecuador">
-    <h2>Recomendaciones en Ecuador</h2>
+    <h2>Viaje a Ecuador</h2>
     <p>Quito histórico, Mitad del Mundo, Baños, Otavalo...</p>
+  </section>
+
+  <!-- Regalos -->
+  <section id="gifts">
+    <h2>Regalos</h2>
+    <p>Tu presencia es nuestro mejor regalo 💖.  
+       Si deseas contribuir, aquí encontrarás opciones.</p>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <h3>¿Hay código de vestimenta?</h3>
+      <p>Formal elegante.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Puedo llevar acompañante?</h3>
+      <p>Por favor confirma en el formulario RSVP.</p>
+    </div>
+    <div class="faq-item">
+      <h3>¿Habrá transporte?</h3>
+      <p>Se organizarán buses desde Quito, más detalles pronto.</p>
+    </div>
   </section>
 
   <!-- RSVP -->
