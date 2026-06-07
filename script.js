@@ -109,3 +109,4 @@ lugares.forEach(lugar => {
       direction: "top"
     });
 });
+};
