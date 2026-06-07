@@ -9,15 +9,16 @@ body {
 /* Header */
 .header {
   display: flex;
+  flex-direction: column; /* ahora los elementos se apilan uno debajo del otro */
   justify-content: center;
   align-items: center;
   padding: 30px;
-  background: #fff;
+  background: #fff; /* fondo blanco */
 }
 
 .header-img {
-  max-height: 120px;
-  margin-right: 20px;
+  max-height: 200px; /* ajusta el tamaño de la imagen */
+  margin-bottom: 20px; /* espacio entre la imagen y el texto */
 }
 
 .title h1 {
@@ -31,6 +32,7 @@ body {
   font-size: 1.2em;
   color: #777;
 }
+
 
 /* Menú horizontal fijo */
 .navbar {
