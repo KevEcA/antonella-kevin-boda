@@ -12,27 +12,36 @@ body {
 .header {
   text-align: center;
   background: #fff;
+  margin: 0;              /* elimina espacio extra */
+  padding: 0;             /* elimina espacio extra */
 }
 
 .banner-img {
   width: 100%;
-  height: auto;             /* mantiene proporción original */
-  max-height: 400px;        /* controla el grosor máximo del banner */
-  object-fit: contain;      /* nunca recorta arriba/abajo */
-  object-position: center;  /* centra la imagen */
+  height: auto;           
+  max-height: 400px;      
+  object-fit: contain;    
+  object-position: center;
   display: block;
-  margin: 0 auto;
-  background-color: #fff;   /* relleno para los lados sobrantes */
+  margin: 0 auto;         
+  margin-bottom: 0;       /* elimina espacio debajo del banner */
+  background-color: #fff; 
 }
 
 /* Texto debajo del banner */
+.subtitle {
+  margin-top: 0;          /* elimina espacio arriba de la sección */
+  padding-top: 20px;      /* deja un poco de aire elegante */
+}
+
 .subtitle p {
   font-size: 1.6em;
   color: #444;
-  margin: 5px 0;     /* menos separación */
+  margin: 5px 0;          /* menos separación */
   font-weight: 500;
-  line-height: 1.2;  /* más compacto */
+  line-height: 1.2;       /* más compacto */
 }
+
 
 .home-section {
   display: flex;
@@ -281,5 +290,12 @@ section {
     object-position: center;/* centra la imagen */
     display: block;
   }
+}
+
+
+.timeline {
+  list-style-type: none;   /* elimina los bullets */
+  padding-left: 0;         /* quita sangría izquierda */
+  margin: 0;               /* opcional: ajusta márgenes */
 }
 
