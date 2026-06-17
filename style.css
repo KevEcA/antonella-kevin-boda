@@ -272,7 +272,7 @@ section {
 @media (max-width: 768px) {
   .banner-img {
     width: 100%;
-    height: 70vh;          /* altura igual a la pantalla */
+    height: 50vh;          /* altura igual a la pantalla */
     object-fit: cover;      /* recorta proporcionalmente */
     object-position: center;/* centra la imagen */
     display: block;
