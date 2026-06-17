@@ -236,3 +236,12 @@ section {
   background: #fff;
 }
 
+/* Arreglo de barra en celular */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;   /* menú vertical */
+    align-items: center;
+    gap: 15px;
+  }
+}
+
