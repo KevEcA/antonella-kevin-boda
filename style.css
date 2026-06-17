@@ -16,10 +16,11 @@ body {
 
 .banner-img {
   width: 100%;
-  height: 120vh;       /* mantiene proporción original */
+  height: 400px;          /* prueba con 300px, 400px, 500px */
+  object-fit: cover;      /* recorta laterales si sobran */
   object-position: center;/* centra la parte visible */
   display: block;
-  margin: 0 auto;     /* centra la imagen */
+  margin: 0 auto;
 }
 
 /* Texto debajo del banner */
