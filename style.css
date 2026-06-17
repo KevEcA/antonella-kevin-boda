@@ -268,14 +268,14 @@ section {
 
 
 
-/* Banner en móviles: ocupa toda la pantalla sin recorte */
+/* Banner en móviles: ocupa toda la pantalla lo recorta */
 @media (max-width: 768px) {
   .banner-img {
     width: 100%;
     height: 100vh;          /* altura igual a la pantalla */
-    object-fit: contain;    /* muestra toda la imagen sin recortar */
+    object-fit: cover;      /* recorta proporcionalmente */
     object-position: center;/* centra la imagen */
     display: block;
-    background-color: #fff; /* color de fondo para las franjas sobrantes */
   }
 }
+
