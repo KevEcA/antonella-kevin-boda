@@ -16,7 +16,7 @@ body {
 
 .banner-img {
   width: 100%;
-  height: 60vh;       /* mantiene proporción original */
+  height: 120vh;       /* mantiene proporción original */
   object-position: center;/* centra la parte visible */
   display: block;
   margin: 0 auto;     /* centra la imagen */
