@@ -236,14 +236,37 @@ section {
   background: #fff;
 }
 
+
+
 /* Arreglo de barra en celular */
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* En móviles: menú oculto y botón visible */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .navbar ul {
-    flex-direction: column;   /* menú vertical */
-    align-items: center;
+    display: none;              /* oculto por defecto */
+    flex-direction: column;     /* vertical */
     gap: 15px;
+    background: #f8f8f8;
+    padding: 20px;
+  }
+
+  .navbar ul.active {
+    display: flex;              /* se muestra al activar */
   }
 }
+
+
 
 /* Banner en móviles: ocupa toda la pantalla sin recorte */
 @media (max-width: 768px) {
