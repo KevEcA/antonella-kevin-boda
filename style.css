@@ -42,6 +42,16 @@ body {
   line-height: 1.2;       /* más compacto */
 }
 
+section {
+  margin-top: 0;      /* elimina espacio arriba de cada sección */
+  padding-top: 20px;  /* deja un poco de aire elegante */
+}
+
+h2, h3, p {
+  margin-top: 10px;   /* reduce espacio superior */
+  margin-bottom: 10px;/* reduce espacio inferior */
+  line-height: 1.2;   /* texto más compacto */
+}
 
 .home-section {
   display: flex;
