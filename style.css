@@ -315,16 +315,17 @@ section {
 }
 
 .footer {
-  text-align: center;
-  font-size: 0.8em;       /* letras pequeñas */
-  color: #666;            /* gris suave */
-  margin-top: 40px;       /* espacio respecto a la sección anterior */
-  padding: 20px 10px;     /* aire interno */
+  text-align: center;       /* centrado */
+  font-size: 0.8em;         /* letras pequeñas */
+  color: #666;              /* gris suave */
+  margin-top: 40px;         /* espacio respecto a la sección anterior */
+  padding: 20px 10px;       /* aire interno */
   border-top: 1px solid #ddd; /* línea sutil arriba */
 }
 
 .footer .powered {
-  font-size: 0.7em;       /* aún más pequeño */
-  color: #999;            /* gris más claro */
+  font-size: 0.7em;         /* aún más pequeño */
+  color: #999;              /* gris más claro */
   margin-top: 5px;
 }
+
