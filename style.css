@@ -42,9 +42,6 @@ body {
   line-height: 1.2;       /* más compacto */
 }
 
-
-}
-
 h2, h3, p {
   margin-top: 10px;   /* reduce espacio superior */
   margin-bottom: 10px;/* reduce espacio inferior */
@@ -76,7 +73,6 @@ h2, h3, p {
   max-width: 400px;
   border-radius: 10px;
 }
-
 
 /* Ruleta Fotos */
 #ruleta h2 {
@@ -129,8 +125,6 @@ section {
   margin-right: auto;
   text-align: center;
 }
-
-
 
 /* Sección Evento en 4 columnas */
 .event-details {
@@ -222,18 +216,24 @@ section {
     width: auto;
     object-fit: contain; /* asegura que las verticales no se corten */
   }
-}
 
-@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;   /* apila imagen y texto */
+    gap: 20px;
+  }
+
   .home-image img {
     width: 100%;
     height: 50vh;
-    object-fit: cover;       /* mejor para banner */
+    object-fit: cover;        /* llena el espacio */
     object-position: center;
     display: block;
   }
-}
 
+  .home-text {
+    text-align: center;       /* centra el texto debajo */
+  }
+}
 
 #map {
   height: 500px;
@@ -275,8 +275,6 @@ section {
   background: #fff;
 }
 
-
-
 /* Arreglo de barra en celular */
 /* Botón hamburguesa oculto en escritorio */
 .menu-toggle {
@@ -305,20 +303,6 @@ section {
   }
 }
 
-
-
-/* Banner en móviles: ocupa toda la pantalla lo recorta */
-@media (max-width: 768px) {
-  .banner-img {
-    width: 100%;
-    height: 50vh;          /* altura igual a la pantalla */
-    object-fit: contain;      /* recorta proporcionalmente */
-    object-position: center;/* centra la imagen */
-    display: block;
-  }
-}
-
-
 .timeline {
   list-style-type: none;   /* elimina los bullets */
   padding-left: 0;         /* quita sangría izquierda */
@@ -339,4 +323,3 @@ section {
   color: #999;              /* gris más claro */
   margin-top: 5px;
 }
-
