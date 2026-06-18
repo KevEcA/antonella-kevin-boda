@@ -119,9 +119,17 @@ h2, h3, p {
 
 /* Secciones generales */
 section {
-  margin-top: 0;
-  padding-top: 20px;
+  margin-top: 0;        /* elimina espacio arriba */
+  padding-top: 20px;    /* aire mínimo arriba */
+  padding-bottom: 40px; /* aire abajo */
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
 
 
 /* Sección Evento en 4 columnas */
