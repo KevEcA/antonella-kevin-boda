@@ -42,9 +42,7 @@ body {
   line-height: 1.2;       /* más compacto */
 }
 
-section {
-  margin-top: 0;      /* elimina espacio arriba de cada sección */
-  padding-top: 20px;  /* deja un poco de aire elegante */
+
 }
 
 h2, h3, p {
@@ -121,9 +119,14 @@ h2, h3, p {
 
 /* Secciones generales */
 section {
-  padding: 60px 20px;
+  margin-top: 0;        /* elimina espacio arriba */
+  padding-top: 20px;    /* aire mínimo arriba */
+  padding-bottom: 40px; /* aire abajo */
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 1000px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
