@@ -224,6 +224,17 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .home-image img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;       /* mejor para banner */
+    object-position: center;
+    display: block;
+  }
+}
+
+
 #map {
   height: 500px;
   width: 100%;
